@@ -1,10 +1,10 @@
 {
   "name": "@visualstorytelling/provenance-tree-visualization-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Visual Storytelling team",
+  "license": "Apache-2.0",
   "main": "dist/provenance-tree-visualization-react.umd.js",
   "module": "dist/provenance-tree-visualization-react.es5.js",
   "typings": "dist/types/provenance-tree-visualization-react.d.ts",
@@ -60,12 +60,12 @@
     "v": "^0.3.0"
   },
   "peerDependencies": {
-    "@visualstorytelling/provenance-core": "^1.1.4"
-  },
-  "dependencies": {
-    "@visualstorytelling/provenance-tree-visualization": "^1.0.0",
+    "@visualstorytelling/provenance-core": "^1.1.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "prop-types": "^15.6.2"
+  },
+  "dependencies": {
+    "@visualstorytelling/provenance-tree-visualization": "^1.0.0"
   }
 }

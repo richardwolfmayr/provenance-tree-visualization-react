@@ -27,7 +27,7 @@ export class ProvenanceTreeVisualizationReact extends React.Component<IProps> {
   }
 
   public static propTypes = {
-    traverser: PropTypes.object
+    traverser: PropTypes.object.isRequired
   }
 }
 
