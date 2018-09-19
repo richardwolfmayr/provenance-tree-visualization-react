@@ -4,30 +4,37 @@ import PropTypes from 'prop-types';
 import { ProvenanceGraphTraverser } from '@visualstorytelling/provenance-core';
 import { ProvenanceTreeVisualization } from '@visualstorytelling/provenance-tree-visualization';
 
-export type IProps = {
-  traverser: ProvenanceGraphTraverser
+export interface IProps {
+  traverser: ProvenanceGraphTraverser;
 }
 
 export class ProvenanceTreeVisualizationReact extends React.Component<IProps> {
+  public static propTypes = {
+    traverser: PropTypes.object.isRequired,
+  };
+
   private provenanceTreeVisualization: ProvenanceTreeVisualization|null = null;
 
-  render() {
+  public render() {
     return React.createElement('div');
   }
 
-  shouldComponentUpdate() {
+  public shouldComponentUpdate() {
     return false;
   }
 
-  componentDidMount() {
+  public componentWillReceiveProps(props: IProps) {
+    (ReactDOM.findDOMNode(this) as HTMLDivElement).innerHTML = '';
+    this.provenanceTreeVisualization = new ProvenanceTreeVisualization(
+      this.props.traverser,
+      ReactDOM.findDOMNode(this) as HTMLDivElement,
+    );
+  }
+
+  public componentDidMount() {
      this.provenanceTreeVisualization = new ProvenanceTreeVisualization(
         this.props.traverser,
         ReactDOM.findDOMNode(this) as HTMLDivElement,
       );
   }
-
-  public static propTypes = {
-    traverser: PropTypes.object.isRequired
-  }
 }
-
