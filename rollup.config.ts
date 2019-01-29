@@ -10,7 +10,7 @@ const pkg = require('./package.json');
 const libraryName = 'provenance-tree-visualization-react';
 
 export default {
-  input: `src/${libraryName}.ts`,
+  input: `src/${libraryName}.tsx`,
   output: [
     {
       file: pkg.main,
@@ -21,7 +21,14 @@ export default {
     { file: pkg.module, format: 'es', sourcemap: true },
   ],
   // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
-  external: ['react', 'react-dom', 'prop-types', 'd3', 'd3-hierarchy', '@visualstorytelling/provenance-core'],
+  external: [
+    'react',
+    'react-dom',
+    'prop-types',
+    'd3',
+    'd3-hierarchy',
+    '@visualstorytelling/provenance-core',
+  ],
   watch: {
     include: 'src/**',
   },

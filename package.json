@@ -1,6 +1,6 @@
 {
   "name": "@visualstorytelling/provenance-tree-visualization-react",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "",
   "keywords": [],
   "author": "Visual Storytelling team",
@@ -12,7 +12,7 @@
     "dist"
   ],
   "scripts": {
-    "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "lint": "tslint -t codeFrame 'src/**/*.ts?' 'test/**/*.ts'",
     "prebuild": "rimraf dist",
     "build": "tsc --module commonjs && rollup -c rollup.config.ts",
     "start": "rollup -c rollup.config.ts -w",
